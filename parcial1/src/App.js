@@ -3,9 +3,8 @@ import './App.css';
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Login from './components/login';
-import Pag1 from './components/pagina1';
-import Pag2 from './components/pagina2';
+import Home from './components/home';
+import Profile from './components/profile';
 
 function App() {
   return (
@@ -15,9 +14,8 @@ function App() {
 
         <Routes>
 
-          <Route path="/" element={<Login />} />
-          <Route path="/home" element={<Pag1 />} />
-          <Route path="/profile" element={<Pag2 />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/profile" element={<Profile />} />
           <Route path="*" element={
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
               <h1>Not Found</h1>
