@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from './components/login';
 import Pag1 from './components/pagina1';
 import Pag2 from './components/pagina2';
+
 function App() {
   return (
     <div className={"App"} style={{ overflowX: 'hidden' }}>
