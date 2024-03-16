@@ -5,6 +5,7 @@ import Image from 'react-bootstrap/Image';
 import Col from 'react-bootstrap/Col';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
+import { FormattedMessage } from 'react-intl';
 
 const Home = () => {
     const [username, setUsername] = useState('');
@@ -62,7 +63,7 @@ const Home = () => {
                             <h3>{fullname} {description} {url}</h3>
                         </Row>
                         <Row>
-                            <h3><b>{posts}</b> posts    <b>{followers}</b> followers    <b>{following}</b> following</h3>
+                            <h3><b>{posts}</b> <FormattedMessage id='posts'/>    <b>{followers}</b> <FormattedMessage id='followers'/>     <b>{following}</b> <FormattedMessage id='following'/> </h3>
                         </Row>
                     </Col>
                 </Row>
@@ -89,12 +90,11 @@ const Home = () => {
             </Container>
             <Modal show={show} onHide={handleClose}>
             <Modal.Header closeButton>
-            <Modal.Title>Modal heading</Modal.Title>
             </Modal.Header>
             <Modal.Body><Image src="https://picsum.photos/350" rounded /></Modal.Body>
             <Modal.Footer>
             <Button variant="secondary" onClick={handleClose}>
-                Close
+                <FormattedMessage id='close'/> 
             </Button>
             </Modal.Footer>
         </Modal>

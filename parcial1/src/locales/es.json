@@ -1,0 +1,11 @@
+{
+    "username": "Nombre de usuario",
+    "fullname": "Nombre completo",
+    "description": "Descripción de perfil",
+    "url": "URL página principal",
+    "save": "Guardar",
+    "posts": "publicaciones",
+    "followers": "seguidores",
+    "following": "siguiendo",
+    "close": "Cerrar"
+}

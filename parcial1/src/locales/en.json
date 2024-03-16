@@ -1,0 +1,11 @@
+{
+    "username": "Username",
+    "fullname": "Full name",
+    "description": "Profile description",
+    "url": "Main page URL",
+    "save": "Save",
+    "posts": "posts",
+    "followers": "followers",
+    "following": "following",
+    "close": "Close"
+}
