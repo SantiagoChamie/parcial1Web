@@ -5,16 +5,26 @@ import './index.css';
 import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import localeEsMessages from "./locales/es";
+import localeEnMessages from "./locales/en";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <IntlProvider locale='en'>
-    <App />
-  </IntlProvider>, document.getElementById("root")
-);
+const browserLanguage = navigator.language || navigator.userLanguage;
+const languageWithoutRegionCode = browserLanguage.toLowerCase().split(/[_-]+/)[0];
+
+let messages;
+let locale;
+
+if (languageWithoutRegionCode === "es") {
+  messages = localeEsMessages;
+  locale = "es";
+} else {
+  messages = localeEnMessages;
+  locale = "en";
+}
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
-  <IntlProvider locale='es-ES' messages = {localeEsMessages}>
+  <IntlProvider locale={locale} messages={messages}>
     <App />
-  </IntlProvider>, document.getElementById("root")
+  </IntlProvider>
 );
